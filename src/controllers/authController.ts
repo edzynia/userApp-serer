@@ -19,7 +19,7 @@ export const loginUser: RequestHandler = (req, res, next) => {
 
     // Generating token
     const token = jwt.sign({ id: user.id, email: user.email }, SECRET_KEY, {
-      expiresIn: '1h',
+      expiresIn: '15m',
     });
 
     // Return token and id to client
