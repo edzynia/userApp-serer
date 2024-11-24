@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building project...' && tsc",
+    "build": "tsc",
     "start": "node dist/server.js",
     "start:prod": "node dist/server.js"
   },
