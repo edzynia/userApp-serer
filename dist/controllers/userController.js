@@ -2,9 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateUser = exports.fetchUserById = exports.fetchUsers = void 0;
 const userService_1 = require("../services/userService");
-/**
- * The list of all users
- */
+// The list of all users
 const fetchUsers = async (req, res) => {
     try {
         const users = await (0, userService_1.getAllUsers)();
@@ -15,9 +13,7 @@ const fetchUsers = async (req, res) => {
     }
 };
 exports.fetchUsers = fetchUsers;
-/**
- * Single user by id
- */
+// Single user by id
 const fetchUserById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -29,9 +25,7 @@ const fetchUserById = async (req, res) => {
     }
 };
 exports.fetchUserById = fetchUserById;
-/**
- * Update user by id
- */
+// Update user by id
 const updateUser = async (req, res) => {
     const { id } = req.params;
     const updatedData = req.body;
